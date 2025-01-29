@@ -17,6 +17,6 @@ class Buch(models.Model):
     erscheinungsdatum = models.DateField()
 
     def __str__(self):
-        return self.title
+        return self.titel
     
 

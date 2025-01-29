@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from rest_framework import generics
+from .models import Buch, Autor
+from .serializes import BuchSerializer
 
-# Create your views here.
+class BücherAPIView(generics.ListAPIView):
+    queryset = Buch.objects.all()
+    serializer_class = BuchSerializer
